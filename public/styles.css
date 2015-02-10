@@ -18,6 +18,10 @@
 	text-decoration: none;
 	border: 2px solid black;
 }
+.navbar-link:hover {
+	background: hsl(359, 42%, 41%);
+	color: #fff;
+}
 
 /*    HOME PAGE    */
 .home-container {
@@ -50,6 +54,12 @@
 .support-headline-secondary {
 	font-family: Arial, Helvetica, sans-serif;
 }
-
+.support-phone-number {
+	font-family: Arial, Helvetica, sans-serif;
+	color: hsl(192, 69%, 58%);
+}
+.message-list {
+	list-style-type: none;
+}
 
 

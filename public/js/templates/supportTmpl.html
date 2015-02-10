@@ -1,9 +1,20 @@
 <div class="support-container">
   <h1 class="support-headline-primary">Support Page</h1>
-  <h3 class="support-headline-secondary">Tickets</h3>
+  <h3 class="support-headline-secondary">Messages</h3>
+
   <div ng-repeat="text in texts">
+      <h4 class="support-phone-number">{{text.from}} : {{text.date_created}}</h4> <br>
+      {{text.body}} 
     <div ng-repeat="(key, value) in text">
-    	{{key}}: {{value}}
+<!--     	{{key}}: {{value}} -->
     </div>
+      <ul class="message-list" ng-repeat="text in texts">
+        <li class="message"{{text.content}}
+      </ul>
   </div>
+  <hr>
+  <form ng-submit="addMessage(text)">
+    <input type="text" ng-model="text"/>
+    <input type="submit" value="respond...">
+  </form>
 </div>
