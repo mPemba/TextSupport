@@ -8,9 +8,9 @@ $scope.texts = sync.$asArray();
 
 console.log(sync.$asArray());
 
-// $scope.addMessage = function(text) {
-// 	sync.$add({message: text});
-// 	$scope.text = '';
-// }
+$scope.bindText = function() {
+	mainService.postData($scope.inputText);
+	$scope.inputText = '';
+}
 
 });

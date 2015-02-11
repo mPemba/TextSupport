@@ -1,10 +1,10 @@
 var app = angular.module('textSupport');
 
-app.service('mainService', function($firebase) {
+app.service('mainService', function($http, $firebase) {
 
-	// this.getMessages = function() {
-	// 	return $firebase(new Firebase(firebaseUrl + '/testMessages'))
-	// }
+	this.postData = function(message) {
+		return $http.post('http://localhost:8666/support/messages', {body: message});
+	}
 
 
 });

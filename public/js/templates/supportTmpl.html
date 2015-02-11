@@ -3,7 +3,8 @@
   <h3 class="support-headline-secondary">Messages</h3>
 
   <div ng-repeat="text in texts">
-      <h4 class="support-phone-number">{{text.from}} : {{text.date_created}}</h4> <br>
+      <h4 class="support-phone-number">{{text.from}}:<br> </h4>
+      <p>{{text.date_created}}</p> <br>
       {{text.body}} 
     <div ng-repeat="(key, value) in text">
 <!--     	{{key}}: {{value}} -->
@@ -13,8 +14,8 @@
       </ul>
   </div>
   <hr>
-  <form ng-submit="addMessage(text)">
-    <input type="text" ng-model="text"/>
+  <form ng-submit="bindText()">
+    <input type="text" ng-model="inputText"/>
     <input type="submit" value="respond...">
   </form>
 </div>
